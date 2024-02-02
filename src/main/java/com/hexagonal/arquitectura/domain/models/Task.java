@@ -9,14 +9,14 @@ public class Task {
     private String title;
     private String description;
     private LocalDateTime creationDate;
-    private boolean complete;
+    private boolean completed;
 
-    public Task(Long id, String title, String description, LocalDateTime creationDate, boolean complete){
+    public Task(Long id, String title, String description, LocalDateTime creationDate, boolean completed){
         this.id = id;
         this.title = title;
         this.description = description;
         this.creationDate = creationDate;
-        this.complete = complete;
+        this.completed = completed;
     }
 
     public Long getId() {
@@ -51,11 +51,11 @@ public class Task {
         this.creationDate = creationDate;
     }
 
-    public boolean isComplete() {
-        return complete;
+    public boolean isCompleted() {
+        return completed;
     }
 
-    public void setComplete(boolean complete) {
-        this.complete = complete;
+    public void setCompleted(boolean completed) {
+        this.completed = completed;
     }
 }
