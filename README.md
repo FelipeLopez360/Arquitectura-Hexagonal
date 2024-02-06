@@ -23,11 +23,11 @@ A continuación se enumeran las rutas de la API con sus métodos HTTP correspond
 
 {  
 
-    "id": 1,
-    "title": "Crear aplicación usando arquitectura hexagonal",
-    "description": "Probando edición de tarea en la aplicación de lista de tareas",
-    "creationDate": "2024-02-02T18:00:00",
-    "completed": false
+       "id": 1,
+       "title": "Crear aplicación usando arquitectura hexagonal",
+       "description": "Probando edición de tarea en la aplicación de lista de tareas",
+       "creationDate": "2024-02-02T18:00:00",
+       "completed": false
     
 }
 
@@ -45,13 +45,20 @@ A continuación se enumeran las rutas de la API con sus métodos HTTP correspond
 
 [Maven](https://maven.apache.org/) - Manejador de dependencias
 
+[Swagger](https://swagger.io/) - Documentar y testear API
+
+
 # Despliegue 📦
 
 - Crea una base de datos llamada tasks en MYSQL.
   
-- puedes cambiar el puerto en application.properties, por defecto use el siguiente:
+- Puedes cambiar el puerto en application.properties, por defecto use el siguiente:
   
   - server.port=8090
+
+- Implemente SWAGGER para documentar y gestionar nuestra API, te dejo link:
+  
+     - http://localhost:8090/swagger-ui/index.html#/ 
 
 - Utilicé POSTMAN para las peticiones HTTP, te dejo las rutas y los metodos:
   - Agregar tarea:
