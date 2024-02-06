@@ -47,10 +47,18 @@ A continuación se enumeran las rutas de la API con sus métodos HTTP correspond
 
 [Swagger](https://swagger.io/) - Documentar y testear API
 
+[Docker](https://www.docker.com/) - Sistema de contenedores
 
-# Despliegue 📦
+[MySQL](https://www.mysql.com/) - Base de datos
 
-- Crea una base de datos llamada tasks en MYSQL.
+[H2](https://www.h2database.com/) - Base de datos en memoria
+
+# Despliegue Base Datos H2 📦
+
+- Este es el despliegue sencillo, solo necesitas ejecutar la aplicacion.
+
+   - La base de datos H2 almacena los datos en memoria temporal, recuerda que al finalizar la aplicacion los datos se borran,
+        si deseas persistencia utiliza la configuracion con MySQL, se explica mas abajo.
   
 - Puedes cambiar el puerto en application.properties, por defecto use el siguiente:
   
@@ -61,7 +69,8 @@ A continuación se enumeran las rutas de la API con sus métodos HTTP correspond
      - http://localhost:8090/swagger-ui/index.html#/ 
 
 - Utilicé POSTMAN para las peticiones HTTP, te dejo las rutas y los metodos:
-  - Agregar tarea:
+
+   - Agregar tarea:
 
      - POST localhost:8090/api/task
 
@@ -84,3 +93,14 @@ A continuación se enumeran las rutas de la API con sus métodos HTTP correspond
   - Información adicional (consulta API externa)
 
      - GET localhost:8090/api/task/5/additionaltaskinfo
+   
+# Despliegue DOCKER 📦
+
+- Abre Docker y ejecuta el archivo "docker-compose.yml" (adjunto en el proyecto) en una linea de comandos.
+
+- Crea una base de datos llamada tasks en MYSQL.
+
+- Debes cambiar los parametros en "application.properties" para que haga que MySQL sea la base de datos predeterminada.
+
+- Puedes uttilizar SWAGGER o POSTMAN para las peticiones a la API.
+
